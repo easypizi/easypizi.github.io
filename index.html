@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox Presentation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="holder holder_center">
+            <h1 class="title">FlexBox</h1>
+            <p class="label"> by Ivan Tolstov</p>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="holder holder__slide">
+            <div class="holder__title">Align Items</div>
+            <div class="holder__description">Свойство align-items выравнивает флекс-элементы внутри контейнера в перпендикулярном направлении.</div>
+            <div class="demo">
+                <div class="controllers">
+                    <div class="controllers__item">
+                        <div class="button button_flex_start">
+                            align-items: flex-start
+                            <div class="sandbox sandbox_align_items">
+                                <div>1</div>
+                                <div>2</div>
+                                <div class="tall">3</div>
+                                <div>4</div>
+                            </div>
+                        </div>
+                        <div class="description">
+                            Флексы выравниваются в начале поперечной оси контейнера.
+                        </div>
+                    </div>
+                    <div class="controllers__item">
+                        <div class="button button_flex_end">
+                            align-items: flex-end
+                            <div class="sandbox sandbox_align_items">
+                                <div>1</div>
+                                <div>2</div>
+                                <div class="tall">3</div>
+                                <div>4</div>
+                            </div>
+                        </div>
+                        <div class="description">
+                            Флексы выравниваются в конце поперечной оси контейнера.
+                        </div>
+                    </div>
+                    <div class="controllers__item">
+                        <div class="button button_center">
+                            align-items: center
+                            <div class="sandbox sandbox_align_items">
+                                <div>1</div>
+                                <div>2</div>
+                                <div class="tall">3</div>
+                                <div>4</div>
+                            </div>
+                        </div>
+                        <div class="description">
+                            Флексы выравниваются по линии поперечной оси.
+                        </div>
+                    </div>
+                    <div class="controllers__item">
+                        <div class="button button_baseline">
+                            align-items: baseline
+                            <div class="sandbox sandbox_align_items">
+                                <div>1</div>
+                                <div>2</div>
+                                <div class="tall">3</div>
+                                <div>4</div>
+                            </div>
+                        </div>
+                        <div class="description">
+                            Флексы выравниваются по их базовой линии.
+                        </div>
+                    </div>
+                    <div class="controllers__item">
+                        <div class="button button_stretch">
+                            align-items: stretch
+                            <div class="sandbox sandbox_align_items">
+                                <div>1</div>
+                                <div>2</div>
+                                <div class="tall">3</div>
+                                <div>4</div>
+                            </div>
+                        </div>
+                        <div class="description">
+                            Флексы растягиваются таким образом, чтобы занять всё доступное пространство контейнера.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="holder holder__slide">
+            <div class="holder__title">Flex Shrink</div>
+            <div class="holder__description">Свойство flex-shrink задает коэффициент сжатия flex с заданным числом. Отрицательное значение не валидно.</div>
+            <div class="demo">
+                <div class="controllers">
+                    <div class="controllers__item">
+                        <div class="button button_mutual">
+                            flex-shrink: 1
+                            <div class="sandbox sandbox_flex_shrink">
+                                <div>1</div>
+                                <div>2</div>
+                                <div>3</div>
+                                <div>4</div>
+                            </div>
+                        </div>
+                        <div class="description">
+                            Обычное поведение флекс потомков
+                        </div>
+                    </div>
+                    <div class="controllers__item">
+                        <div class="button button_wide">
+                            flex-shrink: 0
+                            <div class="sandbox sandbox_flex_shrink">
+                                <div>1</div>
+                                <div>2</div>
+                                <div class="active">3</div>
+                                <div>4</div>
+                            </div>
+                        </div>
+                        <div class="description">
+                            Флекс потомок не ужимается
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="holder holder__slide">
+            <div class="holder__title">Align Self</div>
+            <div class="holder__description">Свойство align-self выравнивает флекс-элементы текущей строки, переписывая значение align-items.</div>
+            <div class="demo">
+                <div class="controllers">
+                    <div class="controllers__item">
+                        <div class="button button_flex_start">
+                            align-self: flex-start
+                            <div class="sandbox sandbox_align_self">
+                                <div>1</div>
+                                <div>2</div>
+                                <div class="active">3</div>
+                                <div>4</div>
+                            </div>
+                        </div>
+                        <div class="description">
+                            Элемент выравнивается в начале поперечной оси контейнера.
+                        </div>
+                    </div>
+                    <div class="controllers__item">
+                        <div class="button button_flex_end">
+                            align-self: flex-end
+                            <div class="sandbox sandbox_align_self">
+                                <div>1</div>
+                                <div>2</div>
+                                <div class="active">3</div>
+                                <div>4</div>
+                            </div>
+                        </div>
+                        <div class="description">
+                            Элемент выравнивается в конце поперечной оси контейнера.
+                        </div>
+                    </div>
+                    <div class="controllers__item">
+                        <div class="button button_center">
+                            align-self: center
+                            <div class="sandbox sandbox_align_self">
+                                <div>1</div>
+                                <div>2</div>
+                                <div class="active">3</div>
+                                <div>4</div>
+                            </div>
+                        </div>
+                        <div class="description">
+                            Флексы выравниваются по линии поперечной оси.
+                        </div>
+                    </div>
+                    <div class="controllers__item">
+                        <div class="button button_baseline">
+                            align-self: baseline
+                            <div class="sandbox sandbox_align_self">
+                                <div>1</div>
+                                <div>2</div>
+                                <div class="active">3</div>
+                                <div>4</div>
+                            </div>
+                        </div>
+                        <div class="description">
+                            Флексы выравниваются по их базовой линии.
+                        </div>
+                    </div>
+                    <div class="controllers__item">
+                        <div class="button button_stretch">
+                            align-self: stretch
+                            <div class="sandbox sandbox_align_self">
+                                <div>1</div>
+                                <div>2</div>
+                                <div class="active">3</div>
+                                <div>4</div>
+                            </div>
+                        </div>
+                        <div class="description">
+                            Флексы растягиваются таким образом, чтобы занять всё доступное пространство контейнера.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="holder holder__slide">
+            <div class="holder__title">Flex Basis</div>
+            <div class="holder__description">Свойство flex-basis определяет основу флекса, которая является начальным размером элемента. Похоже на свойства width и height, к которым добавляется содержимое элемента.</div>
+            <div class="demo">
+                <div class="controllers">
+                    <div class="controllers__item">
+                        <div class="button button_30">
+                            flex-basis: 30%;
+                            <div class="sandbox sandbox_flex_basis">
+                                <div>1</div>
+                                <div class="active">2</div>
+                                <div>3</div>
+                                <div>4</div>
+                            </div>
+                        </div>
+                        <div class="description">
+                            Базовый размер - 30 %
+                        </div>
+                    </div>
+                    <div class="controllers__item">
+                        <div class="button button_100">
+                            flex-basis: 100 px;
+                            <div class="sandbox sandbox_flex_basis">
+                                <div>1</div>
+                                <div class="active" >2</div>
+                                <div>3</div>
+                                <div>4</div>
+                            </div>
+                        </div>
+                        <div class="description">
+                            Базовый размер - 100px
+                        </div>
+                    </div>
+                    <div class="controllers__item">
+                        <div class="button button_content">
+                            flex-basis: content;
+                            <div class="sandbox sandbox_flex_basis">
+                                <div>1</div>
+                                <div class="active">2</div>
+                                <div>3</div>
+                                <div>4</div>
+                            </div>
+                        </div>
+                        <div class="description">
+                            Размер определяется контентом
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

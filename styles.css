@@ -1,0 +1,261 @@
+
+/* Base styles */
+body {
+    font-family: Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    box-shadow: 0 1px 0 0 #000000;
+}
+
+.holder{
+    width: 100%;
+    height: 100%;
+}
+
+.holder_center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 100px;
+    margin-bottom: 0;
+}
+
+.label { 
+    margin-top: 5px;
+    font-size: 20px;
+    align-self: flex-end;
+}
+
+.holder__slide {
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.holder__title { 
+    font-size: 30px;
+    text-transform: uppercase;
+
+}
+
+.holder__description { 
+    font-size: 15px;
+    margin-top: 10px;
+    max-width: 300px;
+    line-height: 18px;
+}
+
+.demo {
+    display: flex;
+    margin-top: 30px;
+    padding: 20px;
+    position: relative;
+}
+
+.controllers { 
+    margin-right: 20px;
+}
+
+.controllers:before{
+    content: 'flex value';
+    font-size: 12px;
+    padding-bottom: 20px;
+    color: #C0c0c0;
+    text-transform: uppercase;
+    font-weight: bold;
+    position: absolute;
+    top: -5px;
+}
+
+.controllers__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.button {
+    font-size: 15px;
+    border: 2px solid blue;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: blue;
+    box-sizing: border-box;
+    transition: all 0.5s;
+    cursor: pointer;
+    min-width: 120px;
+    text-align: center;
+    text-transform: uppercase;
+    white-space: nowrap;
+    
+}
+
+.button:hover {
+    background: blue;
+    color: #ffffff;
+}
+
+.description {
+    font-size: 12px;
+    margin-left: 20px;
+}
+
+.sandbox { 
+    position: absolute;
+    padding: 5px;
+    border: 1px solid red;
+    box-sizing: border-box;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    display: flex;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.sandbox:before {
+    content: 'parent container';
+    font-size: 12px;
+    position: absolute;
+    top: -20px;
+    left: 10px;
+    color: #C0c0c0;
+}
+
+.sandbox:after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed #c0c0c0;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-bottom: 1px;
+}
+
+.sandbox > div {
+    min-width: 3rem;
+    min-height: 3rem;
+    box-shadow: inset 0 0 0 2px #ff00ff;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 15px;
+    color: #ff00ff;
+    line-height: 3rem;
+}
+
+.sandbox .tall {
+    min-height: 4rem;
+    line-height: 4rem;
+}
+
+.button:hover .sandbox {
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+.active {
+    background: #ff00ff;
+    color: #ffffff !important;
+}
+
+
+/* ================ */
+/* Align Items */
+/* ================ */
+.sandbox_align_items {
+    justify-content: center;
+}
+
+.button_flex_start:hover .sandbox {
+    align-items: flex-start;
+}
+
+.button_flex_end:hover .sandbox{
+    align-items: flex-end;
+}
+
+.button_center:hover .sandbox{
+    align-items: center;
+}
+
+.button_baseline:hover .sandbox{
+    align-items: baseline;
+}
+
+.button_stretch:hover .sandbox{
+    align-items: stretch;
+}
+
+/* ================ */
+/* Flex Shrink */
+/* ================ */
+.sandbox_flex_shrink > div {
+    width: 40%;
+}
+
+.active {
+    flex-shrink: 0;
+}
+
+/* ================ */
+/* Align Self */
+/* ================ */
+.sandbox_align_self {
+    justify-content: center;
+    /* bad practise but good solution to use it here */
+    align-items: stretch !important;
+}
+
+.button_flex_start:hover .sandbox_align_self .active {
+    align-self: flex-start;
+}
+
+.button_flex_end:hover .sandbox_align_self .active{
+    align-self: flex-end;
+}
+
+.button_center:hover .sandbox_align_self .active{
+    align-self: center;
+}
+
+.button_baseline:hover .sandbox_align_self .active{
+    align-self: baseline;
+}
+
+.button_stretch:hover .sandbox_align_self .active{
+    align-self: stretch;
+}
+
+/* ============= */
+/* Flex basis */
+/* ============= */
+
+.sandbox_flex_basis {
+  flex-wrap: wrap;
+  align-content: center;
+  height: 100%;
+}
+
+.button_30:hover .sandbox_flex_basis .active{
+    flex-basis: 30%;
+}
+
+.button_100:hover .sandbox_flex_basis .active{
+    flex-basis: 100px;
+}
+
+.button_content:hover .sandbox_flex_basis .active{
+    flex-basis: content;
+}
