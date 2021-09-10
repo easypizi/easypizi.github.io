@@ -8,8 +8,11 @@ body {
 
 .wrapper {
     width: 100vw;
-    height: 100vh;
     box-shadow: 0 1px 0 0 #000000;
+}
+
+.wrapper:first-child {
+    height: 100vh;
 }
 
 .holder{
